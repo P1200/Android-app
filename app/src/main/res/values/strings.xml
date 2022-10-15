@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">NoteExtended</string>
+    <string name="showNotesButton">Wyświetl notatki</string>
+    <string name="createNoteButton">Stwórz notatkę</string>
+    <string name="settingButton">Ustawienia</string>
+    <string name="welcomeText">Witaj w NoteExtended!</string>
+    <string name="menuText">Menu</string>
 </resources>
