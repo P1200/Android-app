@@ -25,11 +25,11 @@ public class HorizontalMenu extends Fragment {
             if (getResources().getConfiguration().orientation ==
                     Configuration.ORIENTATION_PORTRAIT)
             {
-                fragmentTransaction.replace(R.id.linlay, new VerticalMenu());
+                fragmentTransaction.replace(R.id.linlay, new VerticalCreateMenu());
             }
             else
             {
-                fragmentTransaction.replace(R.id.linlay, new HorizontalMenu());
+                fragmentTransaction.replace(R.id.linlay, new HorizontalCreateMenu());
             }
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
