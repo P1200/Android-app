@@ -5,4 +5,7 @@
     <string name="settingButton">Ustawienia</string>
     <string name="welcomeText">Witaj w NoteExtended!</string>
     <string name="menuText">Menu</string>
+    <string name="createMenuText">Utwórz</string>
+    <string name="createTextNoteText">Notatkę tekstową</string>
+    <string name="readNoteFromFileText">Notatkę z pliku</string>
 </resources>
