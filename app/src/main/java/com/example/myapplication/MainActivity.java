@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FragmentManager fragmentManager = getFragmentManager();
@@ -19,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
         if (getResources().getConfiguration().orientation ==
                 Configuration.ORIENTATION_PORTRAIT)
         {
-            fragmentTransaction.replace(R.id.linlay, new HorizontalLayoutFragment());
+            fragmentTransaction.replace(R.id.linlay, new VerticalMenu());
         }
         else
         {
-            fragmentTransaction.replace(R.id.linlay, new VerticalLayoutFragment());
+            fragmentTransaction.replace(R.id.linlay, new HorizontalMenu());
         }
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
