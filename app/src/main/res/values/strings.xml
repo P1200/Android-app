@@ -8,4 +8,9 @@
     <string name="createMenuText">Utwórz</string>
     <string name="createTextNoteText">Notatkę tekstową</string>
     <string name="readNoteFromFileText">Notatkę z pliku</string>
+    <string name="textNoteName">Note name</string>
+    <string name="typeYourNoteName">Type your note name</string>
+    <string name="typeYourNoteContent">Type your note content</string>
+    <string name="noteContent">Note content</string>
+    <string name="saveYourNote">Save your note</string>
 </resources>
