@@ -13,4 +13,8 @@
     <string name="typeYourNoteContent">Type your note content</string>
     <string name="noteContent">Note content</string>
     <string name="saveYourNote">Save your note</string>
+    <string name="note_name_text">Note name:</string>
+    <string name="note_type_text">Note type:</string>
+    <string name="creation_date_text">Creation date:</string>
+    <string name="modification_date_text">Modification date:</string>
 </resources>
