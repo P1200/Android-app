@@ -1,10 +1,15 @@
-package com.example.myapplication;
+package com.example.myapplication.show;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import com.example.myapplication.DBHandler;
+import com.example.myapplication.NotesAdapter;
+import com.example.myapplication.NotesModal;
+import com.example.myapplication.R;
 
 import java.util.ArrayList;
 

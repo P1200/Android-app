@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.menu.create;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -11,6 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.myapplication.create.text.CreateTextNoteActivity;
+import com.example.myapplication.create.text.HorizontalCreateTextNoteMenu;
+import com.example.myapplication.R;
+import com.example.myapplication.ReadFromFileActivity;
+import com.example.myapplication.create.text.VerticalCreateTextNoteMenu;
+
 public class VerticalCreateMenu extends Fragment {
 
     @Override
@@ -18,33 +24,22 @@ public class VerticalCreateMenu extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.vertical_create_menu, container, false);
 
-        Button readFromFilesButton = (Button) view.findViewById(R.id.readNoteFromFileButton);
+        Button readFromFilesButton = view.findViewById(R.id.readNoteFromFileButton);
         readFromFilesButton.setOnClickListener(v -> openReadFromFileActivity());
 
         Button button = view.findViewById(R.id.createTextNoteButton);
-        button.findViewById(R.id.createTextNoteButton).setOnClickListener(v -> {
-            super.onCreate(savedInstanceState);
-            FragmentManager fragmentManager = getFragmentManager();
-            FragmentTransaction fragmentTransaction =
-                    fragmentManager.beginTransaction();
-            if (getResources().getConfiguration().orientation ==
-                    Configuration.ORIENTATION_PORTRAIT)
-            {
-                fragmentTransaction.replace(R.id.linlay, new VerticalCreateTextNoteMenu());
-            }
-            else
-            {
-                fragmentTransaction.replace(R.id.linlay, new HorizontalCreateTextNoteMenu());
-            }
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-        });
+        button.findViewById(R.id.createTextNoteButton).setOnClickListener(v -> openCreateTextNoteActivity());
 
         return view;
     }
 
     private void openReadFromFileActivity() {
         Intent intent = new Intent(getActivity(), ReadFromFileActivity.class);
+        startActivity(intent);
+    }
+
+    private void openCreateTextNoteActivity() {
+        Intent intent = new Intent(getActivity(), CreateTextNoteActivity.class);
         startActivity(intent);
     }
 }
