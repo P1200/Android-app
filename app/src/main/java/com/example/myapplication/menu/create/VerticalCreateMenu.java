@@ -1,10 +1,7 @@
 package com.example.myapplication.menu.create;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +9,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.myapplication.create.text.CreateTextNoteActivity;
-import com.example.myapplication.create.text.HorizontalCreateTextNoteMenu;
 import com.example.myapplication.R;
 import com.example.myapplication.ReadFromFileActivity;
-import com.example.myapplication.create.text.VerticalCreateTextNoteMenu;
 
 public class VerticalCreateMenu extends Fragment {
 
