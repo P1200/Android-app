@@ -1,6 +1,7 @@
-package com.example.myapplication;
+package com.example.myapplication.show;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,12 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.NotesModal;
+import com.example.myapplication.R;
+import com.example.myapplication.show.details.ShowNoteDetailActivity;
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.ArrayList;
 
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> {
 
-    private ArrayList<NotesModal> noteModalArrayList;
-    private Context context;
+    private final ArrayList<NotesModal> noteModalArrayList;
+    private final Context context;
 
     public NotesAdapter(ArrayList<NotesModal> noteModalArrayList, Context context) {
         this.noteModalArrayList = noteModalArrayList;
@@ -44,7 +50,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView noteName, noteType, creationDate, modificationDate;
+        private final TextView noteName, noteType, creationDate, modificationDate;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -52,6 +58,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
             noteType = itemView.findViewById(R.id.noteType);
             creationDate = itemView.findViewById(R.id.creationDate);
             modificationDate = itemView.findViewById(R.id.modificationDate);
+
+            itemView.setOnClickListener(view -> {
+                int position = getAdapterPosition();
+
+                Intent i = new Intent(context, ShowNoteDetailActivity.class);
+                i.putExtra("noteName", noteModalArrayList.get(position).getNotePath());
+                context.startActivity(i);
+            });
         }
     }
 }

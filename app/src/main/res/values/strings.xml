@@ -17,4 +17,5 @@
     <string name="note_type_text">Note type:</string>
     <string name="creation_date_text">Creation date:</string>
     <string name="modification_date_text">Modification date:</string>
+    <string name="edit_note_text">Edit</string>
 </resources>
