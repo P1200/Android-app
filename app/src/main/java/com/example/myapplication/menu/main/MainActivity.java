@@ -11,17 +11,15 @@ import com.example.myapplication.AppIntro;
 
 public class MainActivity extends AppCompatActivity {
 
-    AppIntro canva;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        canva = new AppIntro(this);
+        AppIntro canva = new AppIntro(this);
         setContentView(canva);
         Intent intent = new Intent(this, MainMenu.class);
-        new CountDownTimer(8000, 1000) { // 5000 = 5 sec
+        new CountDownTimer(3000, 1000) { // 5000 = 5 sec
 
             public void onTick(long millisUntilFinished) {
             }
