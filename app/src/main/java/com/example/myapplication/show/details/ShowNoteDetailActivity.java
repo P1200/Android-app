@@ -3,23 +3,17 @@ package com.example.myapplication.show.details;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.myapplication.R;
-import com.example.myapplication.show.NotesAdapter;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -30,7 +24,6 @@ public class ShowNoteDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_note_detail);
         String noteName = getIntent().getStringExtra("noteName");
-
         TextView noteNameText = findViewById(R.id.note_name);
         noteNameText.setText(noteName);
         readNoteFromSD(this, noteName);
