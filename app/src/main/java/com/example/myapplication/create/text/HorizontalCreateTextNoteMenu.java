@@ -35,7 +35,6 @@ public class HorizontalCreateTextNoteMenu extends Fragment {
         View view = inflater.inflate(R.layout.horizontal_create_text_note_menu, container, false);
         initializeWidgets(view);
 
-//        getNoteDataFromActivity();
         notePath.setText(noteName);
         content.setText(noteContent);
 
@@ -89,7 +88,7 @@ public class HorizontalCreateTextNoteMenu extends Fragment {
         super.onResume();
     }
 
-    public void generateNoteOnSD(Context context, String sFileName, String sBody) {
+    private void generateNoteOnSD(Context context, String sFileName, String sBody) {
         try {
             File root = new File(context.getFilesDir(), "Notes");
             if (!root.exists()) {
