@@ -55,6 +55,12 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void deleteNote(String noteName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_NAME, PATH_COL + "=?", new String[]{noteName});
+        db.close();
+    }
+
     public ArrayList<NotesModal> readNotes() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursorNotes = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
