@@ -32,7 +32,7 @@ public class VerticalCreateTextNoteMenu extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.vertical_create_text_note_menu, container, false);
+        View view = inflater.inflate(R.layout.vertical_create_text_note, container, false);
         initializeWidgets(view);
 
 //        getNoteDataFromActivity();

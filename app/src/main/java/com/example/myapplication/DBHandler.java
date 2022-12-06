@@ -61,6 +61,14 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void editNote(String oldNoteName, String newNoteName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(PATH_COL, newNoteName);
+        db.update(TABLE_NAME, values,PATH_COL + " = ?" , new String[]{oldNoteName});
+        db.close();
+    }
+
     public ArrayList<NotesModal> readNotes() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursorNotes = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
