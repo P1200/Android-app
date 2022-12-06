@@ -27,7 +27,6 @@ public class CreateMenuActivity extends AppCompatActivity {
         {
             fragmentTransaction.replace(R.id.createMenuActivity, new HorizontalCreateMenu());
         }
-        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 }

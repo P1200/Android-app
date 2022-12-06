@@ -36,6 +36,7 @@ public class ShowNoteDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_note_detail);
 
         Button deleteNoteButton = findViewById(R.id.delete_note_button);
+        Button editNoteButton = findViewById(R.id.edit_note_button);
         dbHandler = new DBHandler(ShowNoteDetailActivity.this);
 
         String noteName = getIntent().getStringExtra("noteName");
@@ -48,6 +49,12 @@ public class ShowNoteDetailActivity extends AppCompatActivity {
             dbHandler.deleteNote(noteName);
 
             Intent myIntent = new Intent(ShowNoteDetailActivity.this, ShowNotesActivity.class);
+            startActivity(myIntent);
+        });
+
+        editNoteButton.setOnClickListener(view -> {
+            Intent myIntent = new Intent(ShowNoteDetailActivity.this, EditTextNoteActivity.class);
+            myIntent.putExtra("noteName", noteName);
             startActivity(myIntent);
         });
     }

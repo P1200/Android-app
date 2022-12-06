@@ -43,7 +43,6 @@ public class CreateTextNoteActivity extends AppCompatActivity {
             fragment.setArguments(args);
             fragmentTransaction.replace(R.id.createTextNoteActivity, fragment);
         }
-        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 

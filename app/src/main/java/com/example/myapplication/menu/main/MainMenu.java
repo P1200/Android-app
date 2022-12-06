@@ -28,7 +28,6 @@ public class MainMenu extends AppCompatActivity {
         {
             fragmentTransaction.replace(R.id.linlay, new HorizontalMenu());
         }
-        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 }
