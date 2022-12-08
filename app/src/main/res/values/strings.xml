@@ -2,12 +2,12 @@
     <string name="app_name">NoteExtended</string>
     <string name="showNotesButton">Wyświetl notatki</string>
     <string name="createNoteButton">Stwórz notatkę</string>
-    <string name="settingButton">Ustawienia</string>
+    <string name="infoButton">O NoteExtended</string>
     <string name="welcomeText">Witaj w NoteExtended!</string>
     <string name="menuText">Menu</string>
     <string name="createMenuText">Utwórz</string>
     <string name="createTextNoteText">Notatkę tekstową</string>
-    <string name="readNoteFromFileText">Notatkę z pliku</string>
+    <string name="createMapNoteText">Zapis lokalizacji</string>
     <string name="textNoteName">Note name</string>
     <string name="typeYourNoteName">Type your note name</string>
     <string name="typeYourNoteContent">Type your note content</string>
