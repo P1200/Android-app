@@ -9,20 +9,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.myapplication.DBHandler;
-import com.example.myapplication.Image;
 import com.example.myapplication.R;
-import com.example.myapplication.ReadFromFileActivity;
 import com.example.myapplication.show.ShowNotesActivity;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 

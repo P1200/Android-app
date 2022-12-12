@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.myapplication.create.map.CreateMapNoteActivity;
 import com.example.myapplication.create.text.CreateTextNoteActivity;
 import com.example.myapplication.R;
-import com.example.myapplication.ReadFromFileActivity;
 
 public class VerticalCreateMenu extends Fragment {
 
@@ -19,8 +19,8 @@ public class VerticalCreateMenu extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.vertical_create_menu, container, false);
 
-        Button readFromFilesButton = view.findViewById(R.id.readNoteFromFileButton);
-        readFromFilesButton.setOnClickListener(v -> openReadFromFileActivity());
+        Button readFromFilesButton = view.findViewById(R.id.createMapNoteButton);
+        readFromFilesButton.setOnClickListener(v -> openCreateMapNoteActivity());
 
         Button button = view.findViewById(R.id.createTextNoteButton);
         button.findViewById(R.id.createTextNoteButton).setOnClickListener(v -> openCreateTextNoteActivity());
@@ -28,8 +28,8 @@ public class VerticalCreateMenu extends Fragment {
         return view;
     }
 
-    private void openReadFromFileActivity() {
-        Intent intent = new Intent(getActivity(), ReadFromFileActivity.class);
+    private void openCreateMapNoteActivity() {
+        Intent intent = new Intent(getActivity(), CreateMapNoteActivity.class);
         startActivity(intent);
     }
 

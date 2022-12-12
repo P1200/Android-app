@@ -43,13 +43,13 @@
     </Button>
 
     <Button
-        android:id="@+id/settingButton"
+        android:id="@+id/appInfoButton"
         style="?android:attr/buttonBarStyle"
         android:layout_width="fill_parent"
         android:layout_height="55dp"
         android:layout_below="@+id/showNotesButton"
         android:layout_marginHorizontal="10dp"
-        android:text="@string/settingButton"
+        android:text="@string/infoButton"
         android:textSize="16sp">
 
     </Button>

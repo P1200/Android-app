@@ -34,10 +34,10 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="55dp"
-        android:text="@string/settingButton"
+        android:text="@string/infoButton"
         android:textSize="16sp"
         android:layout_marginHorizontal="10dp"
-        android:id="@+id/settingButton"
+        android:id="@+id/appInfoButton"
         style="?android:attr/buttonBarStyle">
     </Button>
 </LinearLayout>
