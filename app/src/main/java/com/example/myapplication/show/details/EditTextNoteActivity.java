@@ -82,7 +82,7 @@ public class EditTextNoteActivity extends AppCompatActivity {
             writer.write(newContent);
             writer.flush();
             writer.close();
-            Toast.makeText(context, "Saved", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Zapisano", Toast.LENGTH_LONG).show();
         } catch (IOException e) {
             e.printStackTrace();
         }
