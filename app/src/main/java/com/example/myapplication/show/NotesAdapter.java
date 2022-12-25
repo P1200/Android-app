@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.NotesModal;
 import com.example.myapplication.R;
 import com.example.myapplication.show.details.ShowNoteDetailActivity;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -39,8 +39,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         NotesModal modal = noteModalArrayList.get(position);
         holder.noteName.setText(modal.getNotePath());
         holder.noteType.setText(modal.getNoteType());
-        holder.creationDate.setText(modal.getCreationDate());
-        holder.modificationDate.setText(modal.getModificationDate());
+        holder.noteIcon.setImageResource(R.drawable.text_note_icon);
     }
 
     @Override
@@ -50,14 +49,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private final TextView noteName, noteType, creationDate, modificationDate;
+        private final TextView noteName, noteType;
+        private final ImageView noteIcon;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             noteName = itemView.findViewById(R.id.noteName);
             noteType = itemView.findViewById(R.id.noteType);
-            creationDate = itemView.findViewById(R.id.creationDate);
-            modificationDate = itemView.findViewById(R.id.modificationDate);
+            noteIcon = itemView.findViewById(R.id.noteIcon);
 
             itemView.setOnClickListener(view -> {
                 int position = getAdapterPosition();
